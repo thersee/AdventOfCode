@@ -8,7 +8,7 @@ i = 0
 prev = list()
 
 while i < len(line):
-    if len(prev) == 13 and line[i] not in prev:
+    if len(prev) == 3 and line[i] not in prev:
         i += 1
         break
     while line[i] in prev:
