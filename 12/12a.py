@@ -18,7 +18,7 @@ for i in range(0, len(lines)):
         if lines[i][j] == 'S':
             x = i
             y = j
-            lines[i]= lines[i].replace('S','a')
+            lines[i] = lines[i].replace('S','a')
         elif lines[i][j] == 'E':
             goalX = i
             goalY = j
@@ -38,7 +38,6 @@ while toVisit:
             visited[(x-1,y)] = currLen+1
             toVisit.append((x-1, y))
         elif visited[(x-1,y)] > currLen+1:
-            print('hej')
             visited[(x-1,y)] = currLen+1
             toVisit.append((x-1, y))
 
@@ -48,7 +47,6 @@ while toVisit:
             visited[(x+1,y)] = currLen+1
             toVisit.append((x+1, y))
         elif visited[(x+1,y)] > currLen+1:
-            print('hej')
             visited[(x+1,y)] = currLen+1
             toVisit.append((x+1, y))
 
@@ -58,7 +56,6 @@ while toVisit:
             visited[(x,y-1)] = currLen+1
             toVisit.append((x, y-1))
         elif visited[(x,y-1)] > currLen+1:
-            print('hej')
             visited[(x,y-1)] = currLen+1
             toVisit.append((x, y-1))
 
@@ -67,7 +64,6 @@ while toVisit:
             visited[(x,y+1)] = currLen+1
             toVisit.append((x, y+1))
         elif visited[(x,y+1)] > currLen+1:
-            print('hej')
             visited[(x,y+1)] = currLen+1
             toVisit.append((x, y+1))
 
