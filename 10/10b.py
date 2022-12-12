@@ -21,7 +21,7 @@ def addSignal():
     if x-1 <= len(crt)%40 <= x+1:
         crt += '#'
     else:
-        crt += '.'
+        crt += ' '
     
     
     if round in [20, 60, 100, 140, 180, 220]:
