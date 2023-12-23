@@ -69,4 +69,4 @@ largeNumber = (26501365 - 65) / 131.0
 # print(a,b,c, largeNumber)
 print(a*largeNumber*largeNumber+b*largeNumber+c)
 
-# 596857212809306 too high
+# 584211423220706 too high
