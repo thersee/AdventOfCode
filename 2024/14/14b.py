@@ -34,7 +34,6 @@ class Robot:
         return (ul,ur,dl,dr)
 
 def printMap(i):
-    file1 = open("output.txt", "w")
     file1.write(str(i)+"*"*cols+'\n')
     for row in range(rows):
         line = ''
@@ -45,7 +44,6 @@ def printMap(i):
                 line += ' '
         file1.write(line+'\n')
     file1.write("*"*cols+'\n')
-    file1.close()
 
 
 robots = []
@@ -57,6 +55,8 @@ for line in lines:
     vel = v.split('=')[1].split(',')
     robots.append(Robot(int(pos[1]), int(pos[0]), int(vel[1]), int(vel[0])))
 
+file1 = open("output1.txt", "w")
+dangerLevel = 1000000000
 for i in range(10000):
     ul = 0
     ur = 0
@@ -71,8 +71,13 @@ for i in range(10000):
         dr += rdr
         robotPositions[(robot.posRow, robot.posCol)] = robot
     
-    printMap(i)
+    newDangerLevel = ul*ur*dl*dr
+    if newDangerLevel < dangerLevel:
+        printMap(i)
+        dangerLevel = newDangerLevel
     # print(ul, ur, dl, dr)
+
+file1.close()
  #13240
  #10150
  #13446
